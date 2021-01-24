@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="detail"
+            type="com.example.myapplicationexample.model.Details" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#D98880"
+        android:padding="@dimen/paddin_10"
+        android:layout_margin="@dimen/paddin_10">
+        <ImageView
+            android:id="@+id/ivAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/paddin_10"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/paddin_5"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:text="@{detail.name}"
+                android:lines="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/holo_orange_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:text="@{detail.track}"
+                android:lines="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/holo_orange_light"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

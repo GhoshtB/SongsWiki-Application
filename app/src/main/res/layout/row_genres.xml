@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data>
+
+        <variable
+            name="tag"
+            type="com.example.myapplicationexample.model.Tag" />
+    </data>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/paddin_3"
+    app:contentPadding="@dimen/paddin_5"
+    android:layout_margin="@dimen/paddin_5"
+    android:id="@+id/genreCard"
+    app:cardBackgroundColor="#8FC9EF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium"
+        android:text="@{tag.name}"
+        android:lines="2"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:textColor="@android:color/white"/>
+
+</androidx.cardview.widget.CardView>
+
+
+
+</layout>
